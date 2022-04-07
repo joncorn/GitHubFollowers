@@ -18,8 +18,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        window?.rootViewController = createTabbar()
         window?.makeKeyAndVisible()
+    }
+    
+    // Creating a method to return a custom ui nav controller called searchVC
+    func createSearchNC() -> UINavigationController {
+        // Creating searchVC constant out of initialized SearchVC
+        let searchVC = SearchVC()
+        // Setting this VC's title to search, and tab bar item to search
+        searchVC.title = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        // Returns our custom nav controller above
+        return UINavigationController(rootViewController: searchVC)
+    }
+    
+    // Creating a method to return a custom ui nav controller called favoritesNC
+    func createFavoritesNC() -> UINavigationController {
+        let favoritesListVC = FavoritesListVC()
+        favoritesListVC.title = "Favorites"
+        favoritesListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        
+        return UINavigationController(rootViewController: favoritesListVC)
+    }
+    
+    // Creating our tab bar
+    func createTabbar() -> UITabBarController {
+        let tabbar = UITabBarController()
+        // Changing system wide tint
+        UITabBar.appearance().tintColor = .systemGreen
+        // Populating with our array of nav controllers we made above
+        tabbar.viewControllers = [createSearchNC(), createFavoritesNC()]
+        
+        return tabbar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
