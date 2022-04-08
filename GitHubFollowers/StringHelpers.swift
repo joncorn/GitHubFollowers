@@ -9,8 +9,8 @@ import Foundation
 
 
 struct StringHelpers {
-   
-   static let ghLogo = "gh-logo"
-   
-   
+    
+    static let ghLogo = "gh-logo"
+    
+    
 }
