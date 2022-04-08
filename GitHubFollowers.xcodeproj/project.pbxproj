@@ -15,6 +15,7 @@
 		7C87E37527FEC0850056A9EE /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87E37427FEC0850056A9EE /* GFButton.swift */; };
 		7C87E377280009B90056A9EE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87E376280009B90056A9EE /* GFTextField.swift */; };
 		7C87E379280013B90056A9EE /* StringHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87E378280013B90056A9EE /* StringHelpers.swift */; };
+		7C87E37B2800DAB10056A9EE /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87E37A2800DAB10056A9EE /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7C87E37427FEC0850056A9EE /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		7C87E376280009B90056A9EE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		7C87E378280013B90056A9EE /* StringHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelpers.swift; sourceTree = "<group>"; };
+		7C87E37A2800DAB10056A9EE /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				7C87E36527FE5CB10056A9EE /* Assets.xcassets */,
 				7C87E36A27FE5CB10056A9EE /* Info.plist */,
 				7C87E37027FE64620056A9EE /* SearchVC.swift */,
+				7C87E37A2800DAB10056A9EE /* FollowerListVC.swift */,
 				7C87E378280013B90056A9EE /* StringHelpers.swift */,
 				7C87E37227FE64960056A9EE /* FavoritesListVC.swift */,
 				7C87E37427FEC0850056A9EE /* GFButton.swift */,
@@ -148,6 +151,7 @@
 				7C87E37527FEC0850056A9EE /* GFButton.swift in Sources */,
 				7C87E37127FE64620056A9EE /* SearchVC.swift in Sources */,
 				7C87E35D27FE5CB00056A9EE /* AppDelegate.swift in Sources */,
+				7C87E37B2800DAB10056A9EE /* FollowerListVC.swift in Sources */,
 				7C87E35F27FE5CB00056A9EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
