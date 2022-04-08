@@ -9,12 +9,12 @@ import UIKit
 
 class SearchVC: UIViewController {
    
-   // Properties
+   // MARK: - Properties
    let logoImageView       = UIImageView()
    let usernameTextField   = GFTextField()
    let callToActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
    
-   // View Life-cycle
+   // MARK: - View lifecycle
    override func viewDidLoad() {
       super.viewDidLoad()
       view.backgroundColor = .systemBackground
@@ -23,18 +23,16 @@ class SearchVC: UIViewController {
       configureCallToActionButton()
    }
    
-   
    override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       navigationController?.isNavigationBarHidden = true
    }
    
-   // View setup methods
+   // MARK: - View Methods
    func configureLogoImageView() {
       view.addSubview(logoImageView)
       logoImageView.translatesAutoresizingMaskIntoConstraints = false
       logoImageView.image = UIImage(named: StringHelpers.ghLogo)
-      
       NSLayoutConstraint.activate([
          logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
          logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -43,10 +41,8 @@ class SearchVC: UIViewController {
       ])
    }
    
-   
    func configureTextField() {
       view.addSubview(usernameTextField)
-      
       NSLayoutConstraint.activate([
          usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
          usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -55,10 +51,8 @@ class SearchVC: UIViewController {
       ])
    }
    
-   
    func configureCallToActionButton() {
       view.addSubview(callToActionButton)
-      
       NSLayoutConstraint.activate([
          callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
          callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -66,6 +60,4 @@ class SearchVC: UIViewController {
          callToActionButton.heightAnchor.constraint(equalToConstant: 50),
       ])
    }
-   
-   
-} // SearchVC end
+} // class end
