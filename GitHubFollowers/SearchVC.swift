@@ -14,6 +14,10 @@ class SearchVC: UIViewController {
     let usernameTextField   = GFTextField()
     let callToActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
+    var isUsernameEntered: Bool {
+        return !usernameTextField.text!.isEmpty
+    }
+    
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +32,26 @@ class SearchVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
-    
     // MARK: - View Methods
     @objc func pushFollowerListVC() {
+        
+        guard isUsernameEntered else {
+            print("No username")
+            return
+        }
+        
         let followerListVC      = FollowerListVC()
         followerListVC.username = usernameTextField.text
         followerListVC.title    = usernameTextField.text
         navigationController?.pushViewController(followerListVC, animated: true)
     }
     
+    
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
+    
     
     func configureLogoImageView() {
         view.addSubview(logoImageView)
@@ -55,6 +66,7 @@ class SearchVC: UIViewController {
         ])
     }
     
+    
     func configureTextField() {
         view.addSubview(usernameTextField)
         // Constraints
@@ -65,6 +77,7 @@ class SearchVC: UIViewController {
             usernameTextField.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
+    
     
     func configureCallToActionButton() {
         view.addSubview(callToActionButton)
