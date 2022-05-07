@@ -9,7 +9,7 @@ import Foundation
 
 // Follower model to show in collection view
 // Collection view just shows avatar and username
-struct Follower: Codable {
+struct Follower: Codable, Hashable {
     var login: String
     var avatarUrl: String
 }
