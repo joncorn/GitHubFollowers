@@ -1,14 +1,15 @@
 //
-//  GFBodyLabel.swift
+//  GFTitleLabel.swift
 //  GitHubFollowers
 //
-//  Created by Jon Corn on 4/9/22.
+//  Created by Jon Corn on 4/8/22.
 //
 
 import UIKit
 
-class GFBodyLabel: UILabel {
+class GFTitleLabel: UILabel {
 
+// MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -18,20 +19,20 @@ class GFBodyLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     // custom init
-    init(textAlignment: NSTextAlignment) {
+    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         super.init(frame: .zero)
         self.textAlignment = textAlignment
+        self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
         configure()
     }
 
+// MARK: - Methods
     private func configure() {
-        textColor                  = .secondaryLabel
-        font                       = UIFont.preferredFont(forTextStyle: .body)
+        textColor                  = .label
         adjustsFontSizeToFitWidth  = true
-        minimumScaleFactor         = 0.75
-        lineBreakMode              = .byWordWrapping
+        minimumScaleFactor         = 0.9
+        lineBreakMode              = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

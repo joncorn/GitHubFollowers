@@ -12,5 +12,4 @@ struct StringHelpers {
     
     static let ghLogo = "gh-logo"
     
-    
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class SearchVC: UIViewController {
     
-    // MARK: - Properties
+// MARK: - Properties
     let logoImageView       = UIImageView()
     let usernameTextField   = GFTextField()
     let callToActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
@@ -18,7 +18,7 @@ class SearchVC: UIViewController {
         return !usernameTextField.text!.isEmpty
     }
     
-    // MARK: - View lifecycle
+// MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -30,10 +30,10 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    // MARK: - View Methods
+// MARK: - View Methods
     @objc func pushFollowerListVC() {
         
         guard isUsernameEntered else {
