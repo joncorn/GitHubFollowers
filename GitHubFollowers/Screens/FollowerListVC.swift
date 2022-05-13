@@ -9,17 +9,16 @@ import UIKit
 
 class FollowerListVC: UIViewController {
     
-    enum Section {
-        case main
-    }
+    enum Section { case main }
     
     // MARK: - Properties
     var username: String!
     var followers: [Follower] = []
-    var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     var page = 1
     var hasMoreFollowers = true
+    
+    var collectionView: UICollectionView!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -53,7 +52,7 @@ class FollowerListVC: UIViewController {
     
     
     func getFollowers(username: String, page: Int) {
-        NetworkManager.shared.getFollowers(for: username, page: 1) { [weak self] result in
+        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
             
             switch result {
