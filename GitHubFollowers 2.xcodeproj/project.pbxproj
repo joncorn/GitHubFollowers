@@ -33,6 +33,7 @@
 		7C87E3B92803658C0056A9EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87E3B82803658C0056A9EE /* User.swift */; };
 		7C87E3BC28036B5A0056A9EE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87E3BB28036B5A0056A9EE /* NetworkManager.swift */; };
 		7C87E3BF2803DEDF0056A9EE /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87E3BE2803DEDF0056A9EE /* ErrorMessage.swift */; };
+		7C92A3622832EE33008946EF /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C92A3612832EE33008946EF /* GFItemInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		7C87E3B82803658C0056A9EE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7C87E3BB28036B5A0056A9EE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7C87E3BE2803DEDF0056A9EE /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		7C92A3612832EE33008946EF /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				7C6C6C1F282E13880038E391 /* GFEmptyStateView.swift */,
+				7C92A3612832EE33008946EF /* GFItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				7C87E3B7280364BC0056A9EE /* Follower.swift in Sources */,
 				7C87E389280186160056A9EE /* UIViewController+Ext.swift in Sources */,
 				7C87E37327FE64960056A9EE /* FavoritesListVC.swift in Sources */,
+				7C92A3622832EE33008946EF /* GFItemInfoView.swift in Sources */,
 				7C87E3BC28036B5A0056A9EE /* NetworkManager.swift in Sources */,
 				7C87E379280013B90056A9EE /* StringHelpers.swift in Sources */,
 				7C87E37D2800F7250056A9EE /* StringValidation.swift in Sources */,
