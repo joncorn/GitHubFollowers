@@ -23,7 +23,7 @@ class UserInfoVC: UIViewController {
             switch result {
             case .success(let user):
                 print(user)
-                
+                #warning("TODO: user info screen")
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "something bad", message: error.rawValue, buttonTitle: "ok")
             }
